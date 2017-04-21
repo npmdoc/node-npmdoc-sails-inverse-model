@@ -1,0 +1,1514 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/juliandavidmr/sails-inverse-model#readme"
+
+    >sails-inverse-model (v2.0.5)</a>
+</h1>
+<h4>Sails Inverse Model helps you build models, controllers and views JS Sails from any database. In addition, you can quickly and individually generate each model, view, controller or all three at the same time.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model">module sails-inverse-model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.generatemg">
+            function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatemg
+            <span class="apidocSignatureSpan">(host, port, database, folder_views, folder_models, folder_controllers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.generatemy">
+            function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatemy
+            <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.generatepg">
+            function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatepg
+            <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>compiler_mongo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>compiler_mysql</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>compiler_pg</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>compiler_sqlfile_mysql</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>components</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>scanner_mysql</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>to</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>toHtmlAttribute</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">sails-inverse-model.</span>view</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.compiler_mongo">module sails-inverse-model.compiler_mongo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_mongo.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mongo.</span>generate
+            <span class="apidocSignatureSpan">(host, port, database, folder_views, folder_models, folder_controllers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_mongo.generateModels">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mongo.</span>generateModels
+            <span class="apidocSignatureSpan">(host, port, database)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.compiler_mysql">module sails-inverse-model.compiler_mysql</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_mysql.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>generate
+            <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_mysql.quitComma">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>quitComma
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_mysql.toSailsAttribute">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>toSailsAttribute
+            <span class="apidocSignatureSpan">(Type, attrib, default_value_, is_nullable_, key_, reference_fk)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.compiler_pg">module sails-inverse-model.compiler_pg</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_pg.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_pg.</span>generate
+            <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.compiler_sqlfile_mysql">module sails-inverse-model.compiler_sqlfile_mysql</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.createModels">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_sqlfile_mysql.</span>createModels
+            <span class="apidocSignatureSpan">(pathsql, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.compiler_sqlfile_mysql.</span>generate
+            <span class="apidocSignatureSpan">(pathsql, folder_models, folder_controllers, folder_views)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.components">module sails-inverse-model.components</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.components.create">
+            function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>create
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.components.edit">
+            function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>edit
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.components.index">
+            function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>index
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.components.show">
+            function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>show
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.scanner_mysql">module sails-inverse-model.scanner_mysql</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.scanner_mysql.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.scanner_mysql.</span>generate
+            <span class="apidocSignatureSpan">(pathsql, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.to">module sails-inverse-model.to</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.to.capitalize">
+            function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>capitalize
+            <span class="apidocSignatureSpan">(word)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.to.saveController">
+            function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>saveController
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.to.toModel">
+            function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>toModel
+            <span class="apidocSignatureSpan">(model_basic)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.toHtmlAttribute">module sails-inverse-model.toHtmlAttribute</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.toHtmlAttribute.SailstoHtmlAtt">
+            function <span class="apidocSignatureSpan">sails-inverse-model.toHtmlAttribute.</span>SailstoHtmlAtt
+            <span class="apidocSignatureSpan">(type_data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sails-inverse-model.view">module sails-inverse-model.view</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sails-inverse-model.view.generate">
+            function <span class="apidocSignatureSpan">sails-inverse-model.view.</span>generate
+            <span class="apidocSignatureSpan">(Models, folder_views)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model" id="apidoc.module.sails-inverse-model">module sails-inverse-model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.generatemg" id="apidoc.element.sails-inverse-model.generatemg">
+        function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatemg
+        <span class="apidocSignatureSpan">(host, port, database, folder_views, folder_models, folder_controllers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generatemg = function (host, port, database, folder_views, folder_models, folder_controllers) {
+  compiler_mg.generate(host, port, database, folder_views, folder_models, folder_controllers);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var sim = require(&#x27;sails-inverse-model&#x27;);
+
+var folder_controllers = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate controllers
+var folder_models = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate models
+var folder_views = &#x22;/your/project/sails/&#x22;; //if folder_models == &#x22;&#x22; then: no generate views
+
+//                host       port         database           views         models        controllers
+sim.<span class="apidocCodeKeywordSpan">generatemg</span>(&#x27;localhost&#x27;, 27017, &#x27;my_name_collection&#x27;, folder_views
+, folder_models, folder_controllers);
+```
+
+### Then navigate to the output folder and can find the js generated.
+
+# [Contributions](/CONTRIBUTING.md)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.generatemy" id="apidoc.element.sails-inverse-model.generatemy">
+        function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatemy
+        <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generatemy = function (config, folder_models, folder_controllers, folder_views) {
+  compiler_my.generate(config, folder_models, folder_controllers, folder_views);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  port: 3306
+}
+
+var folder_controllers = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate controllers
+var folder_models = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate models
+var folder_views = &#x22;/your/project/sails/&#x22;; //if folder_models == &#x22;&#x22; then: no generate views
+
+sim.<span class="apidocCodeKeywordSpan">generatemy</span>(config, folder_models, folder_controllers, folder_views, plurallang);
+```
+
+### Generate from **PostgreSQL** #
+
+```js
+var sim = require(&#x27;sails-inverse-model&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.generatepg" id="apidoc.element.sails-inverse-model.generatepg">
+        function <span class="apidocSignatureSpan">sails-inverse-model.</span>generatepg
+        <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generatepg = function (config, folder_models, folder_controllers, folder_views) {
+  compiler_pg.generate(config, folder_models, folder_controllers, folder_views);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  schema: &#x22;public&#x22;
+}
+
+var folder_controllers = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate controllers
+var folder_models = &#x22;/your/project/sails/api/&#x22;; //if folder_models == &#x22;&#x22; then: no generate models
+var folder_views = &#x22;/your/project/sails/&#x22;; //if folder_models == &#x22;&#x22; then: no generate views
+
+sim.<span class="apidocCodeKeywordSpan">generatepg</span>(config, folder_models, folder_controllers, folder_views, plurallang);
+```
+
+### Generate from **MongoDB** #
+
+```js
+var sim = require(&#x27;sails-inverse-model&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.compiler_mongo" id="apidoc.module.sails-inverse-model.compiler_mongo">module sails-inverse-model.compiler_mongo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_mongo.generate" id="apidoc.element.sails-inverse-model.compiler_mongo.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mongo.</span>generate
+        <span class="apidocSignatureSpan">(host, port, database, folder_views, folder_models, folder_controllers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (host, port, database, folder_views, folder_models, folder_controllers) {
+  return new Promise(function (resolve, reject) {
+    exports
+      .generateModels(host, port, database)
+      .then((Models) =&#x3e; {
+        console.log([
+          Models.length, Models.length &#x3e; 0
+            ? &#x22;tables&#x22;
+            : &#x27;table&#x27;
+        ].join(&#x22; &#x22;));
+
+        //console.log(JSON.stringify(Models, null, 4));
+        if (folder_models !== &#x22;&#x22; &#x26;&#x26; folder_models) {
+          saveModels(folder_models, Models);
+        }
+        if (folder_controllers !== &#x22;&#x22; &#x26;&#x26; folder_controllers) {
+          saveControllers(folder_controllers, Models);
+        }
+        if (folder_views !== &#x22;&#x22; &#x26;&#x26; folder_views) {
+          view.generate(Models, folder_views);
+        }
+      }, (err) =&#x3e; {
+        console.log(err);
+        return reject(err);
+      });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_mongo.generateModels" id="apidoc.element.sails-inverse-model.compiler_mongo.generateModels">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mongo.</span>generateModels
+        <span class="apidocSignatureSpan">(host, port, database)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generateModels = function (host, port, database) {
+  return new Promise(function (resolve, reject) {
+    createURL(host, port, database, function (err, connection_url) {
+      if (err)
+        return reject(err);
+
+      var Models = [];
+      mondongo
+        .describe(connection_url)
+        .then((described) =&#x3e; {
+          described.forEach(elem =&#x3e; {
+            if (elem.collection !== &#x27;system.indexes&#x27; &#x26;&#x26; elem.count &#x3e; 0) {
+              var attributes_sails = [],
+                view_contents = [];
+              elem
+                .describe
+                .forEach(item_descr =&#x3e; {
+                  var result = toSailsAttribute(item_descr.type, item_descr.key, item_descr.isID);
+                  attributes_sails.push(result.model_content);
+                  view_contents.push(result.view_content);
+                });
+
+              Models.push({
+                model_name: s.camelize(elem.collection),
+                content: &#x22;attributes: { &#x22; + (attributes_sails.join(&#x22;, &#x22;)) + &#x22; }&#x22;,
+                view_content: view_contents
+              });
+            }
+          });
+          return resolve(Models);
+        });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var view = require(&#x27;../../genviews/view&#x27;);
+
+// Connection URL var url = &#x27;mongodb://localhost:27017/blog_db&#x27;;
+
+exports.generate = function (host, port, database, folder_views, folder_models, folder_controllers) {
+return new Promise(function (resolve, reject) {
+  exports
+    .<span class="apidocCodeKeywordSpan">generateModels</span>(host, port, database)
+    .then((Models) =&#x3e; {
+      console.log([
+        Models.length, Models.length &#x3e; 0
+          ? &#x22;tables&#x22;
+          : &#x27;table&#x27;
+      ].join(&#x22; &#x22;));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.compiler_mysql" id="apidoc.module.sails-inverse-model.compiler_mysql">module sails-inverse-model.compiler_mysql</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_mysql.generate" id="apidoc.element.sails-inverse-model.compiler_mysql.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>generate
+        <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (config, folder_models, folder_controllers, folder_views) {
+  // Describe connected database
+  mysqldesc(config, function(err, data) {
+    if (err) {
+      console.log(&#x22;ERROR: &#x22;, err);
+    } else {
+      var Models = [],
+        count = 1;
+
+      async.forEachOf(data, function(value, table, callback) {
+        if (data.hasOwnProperty(table)) {
+          console.log(color(&#x22;[&#x22; + (count++) + &#x22; Generating]&#x22;, &#x22;blue&#x22;) + &#x22; &#x22; + table + &#x22; table ...&#x22;);
+
+          var attributes_sails = [],
+            view_contents = [];
+          mysqldesc.keyColumnUsage(config, config.database, table, function(err, data2) {
+            for (var colum in data[table]) {
+              //console.log(table + &#x22;=&#x3e;&#x22; + colum);
+              var reference_fk = undefined;
+              if (data2[colum] &#x26;&#x26; data2[colum][&#x22;REFERENCED_TABLE_NAME&#x22;]) {
+                reference_fk = {
+                  table: data2[colum].REFERENCED_TABLE_NAME,
+                  column: data2[colum].REFERENCED_COLUMN_NAME
+                };
+                //console.log(table + &#x22;=&#x3e;&#x22; + JSON.stringify(data2[colum], null, 4));
+              }
+              var attributes = data[table][colum];
+              //console.log(attributes);
+              var result = transpile(attributes, colum, reference_fk);
+              view_contents.push(result.view_content);
+              attributes_sails.push(result.model_content);
+            }
+            //console.log(&#x22;-------------&#x22;);
+            Models.push({
+              model_name: s.camelize(table).trim(),
+              content: &#x22;attributes: { &#x22; + attributes_sails + &#x22; }&#x22;,
+              view_content: view_contents
+            });
+            //console.log(table + &#x22; = &#x22; + JSON.stringify(table, null, 4));
+            callback(null, table);
+          });
+        }
+      }, function(err) {
+        console.log([Models.length, &#x22;tables&#x22;].join(&#x22; &#x22;));
+
+        //console.log(Models);
+        if (folder_views !== &#x22;&#x22; &#x26;&#x26; folder_views) {
+          view.generate(Models, folder_views);
+        }
+        if (folder_models !== &#x22;&#x22; &#x26;&#x26; folder_models) {
+          saveModels(folder_models, Models);
+        }
+        if (folder_controllers !== &#x22;&#x22; &#x26;&#x26; folder_controllers) {
+          saveControllers(folder_controllers, Models);
+        }
+      });
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_mysql.quitComma" id="apidoc.element.sails-inverse-model.compiler_mysql.quitComma">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>quitComma
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function quitComma(str) {
+  if (str.trim().endsWith(&#x22;,&#x22;)) {
+    return str.trim().substr(0, str.length - 1);
+  }
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_mysql.toSailsAttribute" id="apidoc.element.sails-inverse-model.compiler_mysql.toSailsAttribute">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_mysql.</span>toSailsAttribute
+        <span class="apidocSignatureSpan">(Type, attrib, default_value_, is_nullable_, key_, reference_fk)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toSailsAttribute = function (Type, attrib, default_value_, is_nullable_, key_, reference_fk) {
+  var content_view = {
+    required: false,
+    default_value: default_value_,
+    name: attrib,
+    type: undefined
+  };
+
+  //console.log(attrib);
+  var attribute = [];
+
+  Type = Type.toLowerCase();
+
+  if (Type.indexOf(&#x27;varchar&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;time&#x27;) &#x3e; -1) {
+    attribute.push(getString(Type));
+    content_view.type = &#x22;text&#x22;;
+  } else if (Type.indexOf(&#x27;int&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;small&#x27;) &#x3e; -1) { //Include smallint
+    attribute.push(getInteger(Type));
+    content_view.type = &#x22;number&#x22;;
+  } else if (Type.indexOf(&#x27;bool&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;bit&#x27;) &#x3e; -1) {
+    attribute.push(getBoolean());
+    content_view.type = &#x22;checkbox&#x22;;
+  } else if (Type.indexOf(&#x27;float&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;dec&#x27;) &#x3e; -1 || //Include decimal
+    Type.indexOf(&#x27;numeric&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;real&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;precicion&#x27;) &#x3e; -1) {
+    attribute.push(getFloat());
+    content_view.type = &#x22;number&#x22;;
+  } else if (Type.indexOf(&#x27;enum&#x27;) &#x3e; -1) {
+    attribute.push(getEnum(Type));
+    content_view.type = &#x22;text&#x22;;
+  } else if (Type.indexOf(&#x27;text&#x27;) &#x3e; -1) {
+    attribute.push(getText());
+    content_view.type = &#x22;text&#x22;;
+  } else if (Type.indexOf(&#x27;datetime&#x27;) &#x3e; -1) {
+    attribute.push(getDateTime());
+    content_view.type = &#x22;datetime&#x22;;
+  } else if (Type.indexOf(&#x27;date&#x27;) &#x3e; -1 ||
+    Type.indexOf(&#x27;year&#x27;) &#x3e; -1) {
+    attribute.push(getDate());
+    content_view.type = &#x22;date&#x22;;
+  }
+  if (key_ === &#x22;PRI&#x22;) {
+    attribute.push(getPK());
+    content_view.required = true;
+  } else if (key_ === &#x22;MUL&#x22;) {
+    if (reference_fk) {
+      attrib = attrib.replace(FK_IDENTIFIER, &#x22;&#x22;);
+      //attrib = reference_fk.table;
+      //attribute.push(&#x27;model: &#x27; + reference_fk.table);
+      attribute = [&#x27;model: &#x22;&#x27; + reference_fk.table + &#x27;&#x22;&#x27;];
+    }
+  } else if (key_ === &#x22;UNI&#x22;) {
+    attribute.push(getUnique());
+  }
+  if (is_nullable_ === &#x22;NO&#x22;) {
+    attribute.push(getRequired());
+    content_view.required = true;
+  }
+  if (default_value_ !== &#x22;&#x22; &#x26;&#x26; !default_value_ &#x26;&#x26; default_value_ !== null) {
+    var def = &#x22;defaultsTo: &#x22;;
+    if (content_view.type == &#x22;text&#x22;) {
+      def += &#x27;&#x22;&#x27; + default_value_ + &#x27;&#x22;&#x27;;
+    } else {
+      def += default_value_;
+    }
+    attribute.push(def);
+  }
+
+  var result = {
+    model_content: attrib.toLowerCase() + &#x22;: {&#x22; + attribute.join(&#x27;,&#x27;) + &#x22;}&#x22;,
+    view_content: JSON.stringify(content_view)
+  };
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//console.log(&#x22;attributes &#x22; + JSON.stringify(attributes, null, 4));
+var type_ = attributes[&#x22;Type&#x22;];
+var default_value_ = attributes[&#x22;Default&#x22;];
+var is_nullable_ = attributes[&#x22;Null&#x22;];
+var key_ = attributes[&#x22;Key&#x22;];
+
+//console.log(JSON.stringify(attributes));
+return exports.<span class="apidocCodeKeywordSpan">toSailsAttribute</span>(type_, name_attribute, default_value_, is_nullable_,
+key_, reference_fk);
+}
+
+exports.toSailsAttribute = function(Type, attrib, default_value_, is_nullable_, key_, reference_fk) {
+var content_view = {
+  required: false,
+  default_value: default_value_,
+  name: attrib,
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.compiler_pg" id="apidoc.module.sails-inverse-model.compiler_pg">module sails-inverse-model.compiler_pg</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_pg.generate" id="apidoc.element.sails-inverse-model.compiler_pg.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_pg.</span>generate
+        <span class="apidocSignatureSpan">(config, folder_models, folder_controllers, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (config, folder_models, folder_controllers, folder_views) {
+	PostgresSchema.toJSON(config, config.schema)
+		.then(function(schemas) {
+			//console.log(JSON.stringify(schemas, null, 4));
+			var Models = [];
+
+			//Tables
+			for (var table in schemas.tables) {
+				//console.log(&#x22;Table: &#x22;, table);
+
+				if (schemas.tables.hasOwnProperty(table)) { //confirm data of tables
+					var attrs = schemas.tables[table][&#x22;columns&#x22;];
+					//console.log(attrs);
+					var attributes_sails = [], view_contents = [];
+					for (var attr in attrs) { // attributes of a table
+						if (attrs.hasOwnProperty(attr)) { // attr =&#x3e; name of attribute
+							//console.log(&#x22;\n------&#x3e;&#x3e;&#x22;, properties_attribute);
+							var result = transpile(attrs[attr]);
+							attributes_sails.push(result.model_content);
+							view_contents.push(result.view_content);
+						}
+					}
+
+					//console.log(view_content);
+					Models.push({
+						model_name:s.camelize(table).trim(),
+						content: &#x22;attributes: { &#x22; + (attributes_sails.join(&#x22;, &#x22;)) + &#x22; }&#x22;,
+						view_content: view_contents
+					});
+				}
+			}
+
+			<span class="apidocCodeCommentSpan">/*for (var constraint in schemas.constraints) {
+				console.log(JSON.stringify(constraint));
+			}*/
+</span>
+			console.log([Models.length, &#x22;tables&#x22;].join(&#x22; &#x22;));
+			//console.log(JSON.stringify(Models, null, 4));
+
+			if (folder_models !== &#x22;&#x22; &#x26;&#x26; folder_models) {
+				saveModels(folder_models, Models);
+			}
+			if (folder_controllers !== &#x22;&#x22; &#x26;&#x26; folder_controllers) {
+				saveControllers(folder_controllers, Models);
+			}
+			if (folder_views !== &#x22;&#x22; &#x26;&#x26; folder_views) {
+				view.generate(Models, folder_views);
+			}
+		})
+		.catch(function(error) {
+			console.log(error);
+			// handle error
+		});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.compiler_sqlfile_mysql" id="apidoc.module.sails-inverse-model.compiler_sqlfile_mysql">module sails-inverse-model.compiler_sqlfile_mysql</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.createModels" id="apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.createModels">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_sqlfile_mysql.</span>createModels
+        <span class="apidocSignatureSpan">(pathsql, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createModels = function (pathsql, cb) {
+	scanner.generate(pathsql, function(err, described) {
+		if (err) {
+			cb(err, null);
+		} else {
+			var Models = [];
+			described.map((table, i) =&#x3e; {
+				//console.log(table);
+				var attributes_sails = [],
+					view_contents = [];
+				table.atr.map((attr) =&#x3e; {
+					var transp = transpile(attr);
+					attributes_sails.push(transp.model_content);
+					view_contents.push(transp.view_content);
+				});
+
+				Models.push({
+					model_name: s.camelize(table.table_name),
+					content: &#x22;attributes: { &#x22; + (attributes_sails.join(&#x22;, &#x22;)) + &#x22; }&#x22;,
+					view_content: view_contents
+				});
+			});
+			cb(null, Models);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var compiler_mysql = require(&#x27;./compiler_mysql&#x27;);
+var view = require(&#x27;../../genviews/view&#x27;);
+var to = require(&#x27;../../configs/to&#x27;);
+var s = require(&#x22;underscore.string&#x22;);
+require(&#x27;../save&#x27;);
+
+exports.generate = function(pathsql, folder_models, folder_controllers, folder_views) {
+	this.<span class="apidocCodeKeywordSpan">createModels</span>(pathsql, function(err, Models) {
+		//console.log(JSON.stringify(Models, null, 2));
+		if (folder_views !== &#x22;&#x22; &#x26;&#x26; folder_views) {
+			view.generate(Models, folder_views);
+		}
+		if (folder_models !== &#x22;&#x22; &#x26;&#x26; folder_models) {
+			saveModels(folder_models, Models);
+		}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.generate" id="apidoc.element.sails-inverse-model.compiler_sqlfile_mysql.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.compiler_sqlfile_mysql.</span>generate
+        <span class="apidocSignatureSpan">(pathsql, folder_models, folder_controllers, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (pathsql, folder_models, folder_controllers, folder_views) {
+	this.createModels(pathsql, function(err, Models) {
+		//console.log(JSON.stringify(Models, null, 2));
+		if (folder_views !== &#x22;&#x22; &#x26;&#x26; folder_views) {
+			view.generate(Models, folder_views);
+		}
+		if (folder_models !== &#x22;&#x22; &#x26;&#x26; folder_models) {
+			saveModels(folder_models, Models);
+		}
+		if (folder_controllers !== &#x22;&#x22; &#x26;&#x26; folder_controllers) {
+			saveControllers(folder_controllers, Models);
+		}
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.components" id="apidoc.module.sails-inverse-model.components">module sails-inverse-model.components</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.components.create" id="apidoc.element.sails-inverse-model.components.create">
+        function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>create
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (cb) {
+  return read(&#x22;/crud/create.hbs&#x22;, function (content) {
+    cb(content);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        var element = JSON.parse(item);
+        // element =&#x3e; &#x27;{&#x22;required&#x22;:true,&#x22;name&#x22;:&#x22;descripcion&#x22;,&#x22;type&#x22;:&#x22;text
+&#x22;}&#x27;,
+        data_create
+          .elements
+          .push(element)
+      });
+
+    components.<span class="apidocCodeKeywordSpan">create</span>(function (hbs) {
+      var template = Handlebars.compile(hbs);
+      var html = template(data_create);
+      //console.log(html);
+      resolve(html);
+    });
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.components.edit" id="apidoc.element.sails-inverse-model.components.edit">
+        function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>edit
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">edit = function (cb) {
+  return read(&#x22;/crud/edit.hbs&#x22;, function (content) {
+    cb(content);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        var element = JSON.parse(item);
+        //element =&#x3e; &#x27;{&#x22;required&#x22;:true,&#x22;name&#x22;:&#x22;descripcion&#x22;,&#x22;type&#x22;:&#x22;text&#
+x22;}&#x27;,
+        data_create
+          .elements
+          .push(element)
+      });
+
+    components.<span class="apidocCodeKeywordSpan">edit</span>(function (hbs) {
+      var template = Handlebars.compile(hbs);
+      var html = template(data_create);
+      //console.log(html);
+      resolve(html);
+    });
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.components.index" id="apidoc.element.sails-inverse-model.components.index">
+        function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>index
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">index = function (cb) {
+  return read(&#x22;/crud/index.hbs&#x22;, function (content) {
+    cb(content);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        var element = JSON.parse(item);
+        //element =&#x3e; &#x27;{&#x22;required&#x22;:true,&#x22;name&#x22;:&#x22;descripcion&#x22;,&#x22;type&#x22;:&#x22;text&#
+x22;}&#x27;,
+        data_list
+          .elements
+          .push(element)
+      });
+
+    components.<span class="apidocCodeKeywordSpan">index</span>(function (hbs) {
+      var template = Handlebars.compile(hbs);
+      var html = template(data_list);
+      //console.log(html);
+      resolve(html);
+    });
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.components.show" id="apidoc.element.sails-inverse-model.components.show">
+        function <span class="apidocSignatureSpan">sails-inverse-model.components.</span>show
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">show = function (cb) {
+  return read(&#x22;/crud/show.hbs&#x22;, function (content) {
+    cb(content);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        var element = JSON.parse(item);
+        //element =&#x3e; &#x27;{&#x22;required&#x22;:true,&#x22;name&#x22;:&#x22;descripcion&#x22;,&#x22;type&#x22;:&#x22;text&#
+x22;}&#x27;,
+        data_list
+          .elements
+          .push(element)
+      });
+
+    components.<span class="apidocCodeKeywordSpan">show</span>(function (hbs) {
+      var template = Handlebars.compile(hbs);
+      var html = template(data_list);
+      //console.log(html);
+      resolve(html);
+    });
+  });
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.scanner_mysql" id="apidoc.module.sails-inverse-model.scanner_mysql">module sails-inverse-model.scanner_mysql</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.scanner_mysql.generate" id="apidoc.element.sails-inverse-model.scanner_mysql.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.scanner_mysql.</span>generate
+        <span class="apidocSignatureSpan">(pathsql, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (pathsql, cb) {
+  gencode
+    .utils
+    .toArray(pathsql, &#x27;utf8&#x27;, &#x27;\n&#x27;)
+    .then((value) =&#x3e; { //Too: \n, \t, -, etc.
+      var allData = &#x22;&#x22;;
+      var tables = [],
+        dataValid = [];
+      value.map((item) =&#x3e; {
+        item = item
+          .toString()
+          .trim()
+          .toLowerCase();
+
+        if (!isComment(item)) {
+          allData += item;
+        }
+      });
+      var splits = allData.split(&#x22;;&#x22;);
+      for (var i = 0; i &#x3c; splits.length; i++) {
+        if (isValid(splits[i])) {
+          dataValid.push(splits[i]);
+        }
+      }
+
+      for (var i = 0; i &#x3c; dataValid.length; i++) {
+        if (dataValid[i].toString().toLowerCase().trim().startsWith(&#x27;create table&#x27;)) {
+          tables.push(verifyContains(dataValid[i].toString()));
+        }
+      }
+      getTablesJSON(tables, function (err, result) {
+        //console.log(&#x22;:&#x3e;&#x22;, JSON.stringify(result, null, 2));
+        cb(err, result);
+      });
+
+    }, (error) =&#x3e; {
+      cb(error, null);
+      //console.log(&#x22;ERROR=&#x3e;&#x22;, error);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.to" id="apidoc.module.sails-inverse-model.to">module sails-inverse-model.to</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.to.capitalize" id="apidoc.element.sails-inverse-model.to.capitalize">
+        function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>capitalize
+        <span class="apidocSignatureSpan">(word)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">capitalize = function (word) {
+  return word.replace(/(^|\s)([a-z])/g, function(m, p1, p2) {
+    return p1 + p2.toUpperCase();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//console.log(model_basic);
+out.push(model_basic);
+out.push(&#x22;};&#x22;);
+return out.join(&#x22;\n&#x22;);
+};
+
+exports.saveController = function(name) {
+var name_cap = exports.<span class="apidocCodeKeywordSpan">capitalize</span>(name);
+return [
+  &#x22;/**&#x22;,
+  &#x22;* &#x22; + name_cap,
+  &#x22;*&#x22;,
+  &#x22;* @description :: Server-side logic for managing &#x22; + name_cap,
+  &#x22;* @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers&#x22;,
+  &#x22;*/&#x22;,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.to.saveController" id="apidoc.element.sails-inverse-model.to.saveController">
+        function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>saveController
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">saveController = function (name) {
+  var name_cap = exports.capitalize(name);
+  return [
+    &#x22;/**&#x22;,
+    &#x22;* &#x22; + name_cap,
+    &#x22;*&#x22;,
+    &#x22;* @description :: Server-side logic for managing &#x22; + name_cap,
+    &#x22;* @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers&#x22;,
+    &#x22;*/&#x22;,
+    &#x22;module.exports = {&#x22;,
+    &#x22;		index: function(req, res, next) {&#x22;,
+    &#x22;			&#x22; + name_cap + &#x22;.find().exec(function(err, list) {&#x22;,
+    &#x22;	  		if (err) return Error(&#x27;Error&#x27;);&#x22;,
+    &#x22;		  		return res.view({&#x22;,
+    &#x22;						result: list&#x22;,
+    &#x22;					});&#x22;,
+    &#x22;				});&#x22;,
+    &#x22;			},&#x22;,
+    &#x22;&#x22;,
+    &#x22;		show: function(req, res, next) {&#x22;,
+    &#x22;			&#x22; + name_cap + &#x22;.findOneById(req.param(&#x27;id&#x27;), function Founded(err, value) {&#x22;,
+    &#x22;				if (err) {&#x22;,
+    &#x22;					return next(err);&#x22;,
+    &#x22;				}&#x22;,
+    &#x22;				res.view({&#x22;,
+    &#x22;					element: value&#x22;,
+    &#x22;				});&#x22;,
+    &#x22;			});&#x22;,
+    &#x22;		},&#x22;,
+    &#x22;&#x22;,
+    &#x22;		edit: function(req, res, next) {&#x22;,
+    &#x22;			&#x22; + name_cap + &#x22;.findOne(req.param(&#x27;id&#x27;), function Founded(err, value) {&#x22;,
+    &#x22;				if (err) {&#x22;,
+    &#x22;					return next(err);&#x22;,
+    &#x22;				}&#x22;,
+    &#x22;				res.view({&#x22;,
+    &#x22;					element: value&#x22;,
+    &#x22;				});&#x22;,
+    &#x22;			});&#x22;,
+    &#x22;		},&#x22;,
+    &#x22;&#x22;,
+    &#x22;		update: function(req, res, next) {&#x22;,
+    &#x22;	  	&#x22; + name_cap + &#x22;.update(req.param(&#x27;id&#x27;), req.body, function Update(err, value) {&#x22;,
+    &#x22;				if(err) {&#x22;,
+    &#x22;					return next(err);&#x22;,
+    &#x22;				}&#x22;,
+    &#x22;				return res.redirect(&#x27;&#x22; + name + &#x22;/show/&#x27; + req.param(&#x27;id&#x27;));&#x22;,
+    &#x22;			});&#x22;,
+    &#x22;		},&#x22;,
+    &#x22;&#x22;,
+    &#x22;		delete: function(req, res, next) {&#x22;,
+    &#x22;			&#x22; + name_cap + &#x22;.destroy(req.param(&#x27;id&#x27;), function Update(err, value) {&#x22;,
+    &#x22;				if (err) {&#x22;,
+    &#x22;					return next(err);&#x22;,
+    &#x22;				}&#x22;,
+    &#x22;				return res.redirect(&#x27;/&#x22; + name + &#x22;&#x27;);&#x22;,
+    &#x22;			});&#x22;,
+    &#x22;		},&#x22;,
+    &#x22;&#x22;,
+    &#x22;};&#x22;
+  ].join(&#x22;\n&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	mkdir(dir_folder_controllers).then(() =&#x3e; {
+		Models.map((model) =&#x3e; {
+			var name_c = to
+				.capitalize(model.model_name)
+				.trim()
+				.concat(&#x22;Controller.js&#x22;);
+			gencode.save(b.beautify_js(to.<span class="apidocCodeKeywordSpan">saveController</span>(s.camelize(model.model_name))), dir_folder_controllers
+, name_c).then((value) =&#x3e; {
+				bar2.tick();
+				if (bar2.complete) {
+					console.log(&#x27;Controllers &#x27; + color(&#x22;[OK]&#x22;, &#x22;green&#x22;));
+				}
+			}, (err) =&#x3e; {
+				console.warn([ansi.red.open, &#x22;ERROR&#x22;, err, ansi.red.close].join(&#x22;\n&#x22;));
+			});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.to.toModel" id="apidoc.element.sails-inverse-model.to.toModel">
+        function <span class="apidocSignatureSpan">sails-inverse-model.to.</span>toModel
+        <span class="apidocSignatureSpan">(model_basic)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toModel = function (model_basic) {
+  var out = [];
+  out.push(&#x22;/**&#x22;);
+  out.push(&#x22;\tGenerated by sails-inverse-model&#x22;);
+  out.push(&#x22;\tDate:&#x22; + (new Date()).toString());
+  out.push(&#x22;*/\n&#x22;);
+  out.push(&#x22;module.exports = {&#x22;);
+  //console.log(model_basic);
+  out.push(model_basic);
+  out.push(&#x22;};&#x22;);
+  return out.join(&#x22;\n&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	//console.log(Models);
+	mkdir(dir_folder_model).then(() =&#x3e; {
+		Models.map((model) =&#x3e; {
+			//console.log(model);
+			var name_m = to
+				.capitalize(model.model_name)
+				.trim() + &#x22;.js&#x22;;
+			gencode.save(b.beautify_js(to.<span class="apidocCodeKeywordSpan">toModel</span>(model.content)), dir_folder_model, name_m).then
+((value) =&#x3e; {
+				bar.tick();
+				if (bar.complete) {
+					console.log(&#x27;Models &#x27; + color(&#x22;[OK]&#x22;, &#x22;green&#x22;));
+				}
+			}, (err) =&#x3e; {
+				console.error(color(err, &#x22;red&#x22;));
+			});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.toHtmlAttribute" id="apidoc.module.sails-inverse-model.toHtmlAttribute">module sails-inverse-model.toHtmlAttribute</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.toHtmlAttribute.SailstoHtmlAtt" id="apidoc.element.sails-inverse-model.toHtmlAttribute.SailstoHtmlAtt">
+        function <span class="apidocSignatureSpan">sails-inverse-model.toHtmlAttribute.</span>SailstoHtmlAtt
+        <span class="apidocSignatureSpan">(type_data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SailstoHtmlAtt = function (type_data) {
+  switch (type_data) {
+    case &#x27;text&#x27;:
+    case &#x27;string&#x27;:
+    case &#x27;mediumtext&#x27;:
+    case &#x27;longtext&#x27;:
+    case &#x27;array&#x27;:
+    case &#x27;json&#x27;:
+      return &#x27;text&#x27;;
+    case &#x27;float&#x27;:
+    case &#x27;integer&#x27;:
+    case &#x27;objectid&#x27;:
+      return &#x27;number&#x27;;
+    case &#x27;boolean&#x27;:
+    case &#x27;binary&#x27;:
+      return &#x27;checkbox&#x27;;
+    default:
+      return type_data;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var _aux_item = separate[0] + &#x22;: { type: &#x27;&#x22; + separate[1] + &#x22;&#x27;, &#x22;;
+    aux_item_model.push(_aux_item + result + &#x22;}&#x22;);
+
+    var content_view = {
+      required: result.indexOf(constants.REQUIRED) !== -1, // Index string required for view input &#x3c;input type=&#x22;any&#x22
+; required=&#x22;true | false&#x22;&#x3e;
+      default_value: 0,
+      name: separate[0],
+      type: convert.<span class="apidocCodeKeywordSpan">SailstoHtmlAtt</span>(separate[1])
+    };
+
+    aux_item_view.push(JSON.stringify(content_view));
+  });
+});
+
+Model.push({
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sails-inverse-model.view" id="apidoc.module.sails-inverse-model.view">module sails-inverse-model.view</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sails-inverse-model.view.generate" id="apidoc.element.sails-inverse-model.view.generate">
+        function <span class="apidocSignatureSpan">sails-inverse-model.view.</span>generate
+        <span class="apidocSignatureSpan">(Models, folder_views)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">generate = function (Models, folder_views) {
+  mkdir(folder_views).then(() =&#x3e; {
+    var bar3 = new ProgressBar(&#x27;:bar&#x27;, {
+      total: Models.length
+    });
+
+    Models.forEach(model =&#x3e; {
+      var route = concat(folder_views, model.model_name);
+
+      mkdir(route).then(() =&#x3e; {
+        create(model.model_name, author, model).then((html) =&#x3e; {
+          //console.log(html);
+          gencode.save(html, route, &#x22;create.ejs&#x22;).then((value) =&#x3e; {
+            //console.log(value);
+          }, (err) =&#x3e; {
+            console.log([ansi.red.open, &#x22;ERROR&#x22;, err, ansi.red.close].join(&#x22;\n&#x22;));
+          });
+        });
+
+        edit(model.model_name, author, model).then((html) =&#x3e; {
+          gencode.save(html, route, &#x22;edit.ejs&#x22;).then((value) =&#x3e; {
+            //console.log(value);
+          }, (err) =&#x3e; {
+            console.log([ansi.red.open, &#x22;ERROR&#x22;, err, ansi.red.close].join(&#x22;\n&#x22;));
+          });
+        });
+
+        index(model.model_name, author, model).then((html) =&#x3e; {
+          gencode.save(html, route, &#x22;index.ejs&#x22;).then((value) =&#x3e; {
+            //console.log(value);
+          }, (err) =&#x3e; {
+            console.log([ansi.red.open, &#x22;ERROR&#x22;, err, ansi.red.close].join(&#x22;\n&#x22;));
+          });
+        });
+
+        show(model.model_name, author, model).then((html) =&#x3e; {
+          gencode.save(html, route, &#x22;show.ejs&#x22;).then((value) =&#x3e; {
+            //console.log(value);
+          }, (err) =&#x3e; {
+            console.log([ansi.red.open, &#x22;ERROR&#x22;, err, ansi.red.close].join(&#x22;\n&#x22;));
+          });
+        });
+      });
+
+      bar3.tick();
+      if (bar3.complete) {
+        console.log(&#x27;Views &#x27; + color(&#x22;[OK]&#x22;, &#x22;green&#x22;));
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param  {[json]} config               [config database PostgreSQL; user, password, host, database, schema, port]
+* @param  {[string]} folder_models      [dir folder models]
+* @param  {[string]} folder_controllers [dir folder controllers]
+* @param  {[string]} folder_views       [dir folder views]
+* @return {[void]}                    [none]
+*/
+exports.generatepg = function (config, folder_models, folder_controllers, folder_views) {
+ compiler_pg.<span class="apidocCodeKeywordSpan">generate</span>(config, folder_models, folder_controllers, folder_views);
+};
+
+/**
+* [generatemy generate mvc from MySQL]
+* @param  {[json]} config             	[config database MySQL; user, password, host, database, port]
+* @param  {[string]} folder_models      		[dir folder models]
+* @param  {[string]} folder_controllers 		[dir folder controllers]
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
